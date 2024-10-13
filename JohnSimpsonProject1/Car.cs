@@ -10,7 +10,7 @@ namespace JohnSimpsonProject1
     {
         public string Make { get; set; }
         public string Model { get; set; }
-        public double MPG { get; set; }
+        public double Mpg { get; set; }
         public decimal Price { get; set; }
 
         public Car(string make, string model, double mpg, decimal price)
@@ -37,7 +37,7 @@ namespace JohnSimpsonProject1
 
             Make = make;
             Model = model;
-            MPG = mpg;
+            Mpg = mpg;
             Price = price;
         }
     }

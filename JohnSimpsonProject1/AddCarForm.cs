@@ -12,8 +12,8 @@ namespace JohnSimpsonProject1
 {
     public partial class AddCarForm : Form
     {
-        public Car NewCar { get;private set; }
-        
+        public Car NewCar { get;private set; } = null!;
+
         public AddCarForm()
         {
             InitializeComponent();
@@ -23,12 +23,12 @@ namespace JohnSimpsonProject1
         {
             if (string.IsNullOrWhiteSpace(MakeTextBox.Text))
             {
-                MessageBox.Show("Please Enter valid Make");
+                MessageBox.Show(@"Please Enter valid Make");
             }
            
             if (string.IsNullOrWhiteSpace(ModelTextBox.Text))
             {
-                MessageBox.Show("Please enter valid Model");
+                MessageBox.Show(@"Please enter valid Model");
             }
 
             if ((double.TryParse(MpgTextBox.Text, out double mpg)) && (decimal.TryParse(PriceTextBox.Text, out decimal price)))
@@ -42,7 +42,7 @@ namespace JohnSimpsonProject1
             }
             else
             {
-                MessageBox.Show("Please make sure you entered valid numbers for price and MPG");
+                MessageBox.Show(@"Please make sure you entered valid numbers for price and MPG");
             }
             
 

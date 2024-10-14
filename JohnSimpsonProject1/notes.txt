@@ -1,6 +1,7 @@
-﻿We are currently lacking ability to add car
-ability to track shopper
+﻿
+
+
 ability to purchase car
 ability to remove car from lot
-ability to add car to lot
+
 abilit to display detailed breakdown of car information.

@@ -43,6 +43,7 @@
             Submit.TabIndex = 3;
             Submit.Text = "Submit Info";
             Submit.UseVisualStyleBackColor = true;
+            Submit.Click += Submit_Click;
             // 
             // ShopperNameBox
             // 
@@ -50,6 +51,7 @@
             ShopperNameBox.Name = "ShopperNameBox";
             ShopperNameBox.Size = new Size(136, 23);
             ShopperNameBox.TabIndex = 1;
+            ShopperNameBox.TextChanged += ShopperNameBox_TextChanged;
             // 
             // label1
             // 

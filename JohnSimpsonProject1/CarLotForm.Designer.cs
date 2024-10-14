@@ -32,8 +32,9 @@
             label1 = new Label();
             AddVehicleToLot = new Button();
             RefreshCarLot = new Button();
-            shopperInfoBox = new ListBox();
+            ShopperName = new ListBox();
             addShopper = new Button();
+            ShopperBudget = new ListBox();
             SuspendLayout();
             // 
             // MainDisplay
@@ -74,14 +75,14 @@
             RefreshCarLot.UseVisualStyleBackColor = true;
             RefreshCarLot.Click += RefreshCarLot_Click;
             // 
-            // shopperInfoBox
+            // ShopperName
             // 
-            shopperInfoBox.FormattingEnabled = true;
-            shopperInfoBox.ItemHeight = 15;
-            shopperInfoBox.Location = new Point(601, 27);
-            shopperInfoBox.Name = "shopperInfoBox";
-            shopperInfoBox.Size = new Size(303, 139);
-            shopperInfoBox.TabIndex = 4;
+            ShopperName.FormattingEnabled = true;
+            ShopperName.ItemHeight = 15;
+            ShopperName.Location = new Point(601, 27);
+            ShopperName.Name = "ShopperName";
+            ShopperName.Size = new Size(128, 34);
+            ShopperName.TabIndex = 4;
             // 
             // addShopper
             // 
@@ -91,14 +92,25 @@
             addShopper.TabIndex = 5;
             addShopper.Text = "Tell us about yourself!";
             addShopper.UseVisualStyleBackColor = true;
+            addShopper.Click += addShopper_Click;
+            // 
+            // ShopperBudget
+            // 
+            ShopperBudget.FormattingEnabled = true;
+            ShopperBudget.ItemHeight = 15;
+            ShopperBudget.Location = new Point(792, 27);
+            ShopperBudget.Name = "ShopperBudget";
+            ShopperBudget.Size = new Size(128, 34);
+            ShopperBudget.TabIndex = 6;
             // 
             // CarLotForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(932, 595);
+            Controls.Add(ShopperBudget);
             Controls.Add(addShopper);
-            Controls.Add(shopperInfoBox);
+            Controls.Add(ShopperName);
             Controls.Add(RefreshCarLot);
             Controls.Add(AddVehicleToLot);
             Controls.Add(label1);
@@ -115,7 +127,8 @@
         private Label label1;
         private Button AddVehicleToLot;
         private Button RefreshCarLot;
-        private ListBox shopperInfoBox;
+        private ListBox ShopperName;
         private Button addShopper;
+        private ListBox ShopperBudget;
     }
 }

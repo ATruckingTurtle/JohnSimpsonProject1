@@ -8,10 +8,11 @@ namespace JohnSimpsonProject1
 {
     public class Shopper
     {
-        private string Name { get; set; }
-        private decimal MoneyAvailable { get; set; }
+        public string Name { get; set; }
+        public decimal MoneyAvailable { get; set; }
 
-        private List<Car> Cars;
+        public List<Car> Cars;
+        
 
         public Shopper(string name, decimal moneyAvailable)
         {

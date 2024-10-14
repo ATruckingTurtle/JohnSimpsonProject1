@@ -2,7 +2,7 @@ namespace JohnSimpsonProject1
 {
     public partial class Form1 : Form
     {
-        private CarLotForm newCarLotForm;
+        private CarLotForm? _newCarLotForm;
 
         public Form1()
         {
@@ -11,8 +11,8 @@ namespace JohnSimpsonProject1
 
         private void CarLotAccess_Click(object sender, EventArgs e)
         {
-            newCarLotForm = new CarLotForm();
-            newCarLotForm.ShowDialog();
+            _newCarLotForm = new CarLotForm();
+            _newCarLotForm.ShowDialog();
         }
     }
 }

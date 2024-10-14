@@ -17,7 +17,7 @@ namespace JohnSimpsonProject1
         {
             if (string.IsNullOrWhiteSpace(name))
             {
-                throw new ArgumentNullException("Name cannot be null or white space");
+                throw new ArgumentNullException(nameof(name));
             }
 
             if (moneyAvailable < 0)
@@ -33,11 +33,30 @@ namespace JohnSimpsonProject1
         {
             if (car == null)
             {
-                throw new ArgumentException("Car cannot be null");
+                throw new ArgumentNullException(nameof(car));
             }
 
             var vehicleCost = CarLot.GetTotalCostsOfPurchase(car);
             return vehicleCost <= MoneyAvailable;
+        }
+
+        public void PurchaseCar(Car car)
+        {
+            if (car == null)
+            {
+                throw new ArgumentNullException(nameof(car));
+            }
+
+            if (CanPurchase(car))
+            {
+                decimal vehicleCost = CarLot.GetTotalCostsOfPurchase(car);
+                MoneyAvailable -= vehicleCost;
+                Cars.Add(car);
+            }
+            else
+            {
+                throw new ArgumentException("Not enough money to purchase");
+            }
         }
     }
 }

@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            CarLotAccess = new Button();
+            SuspendLayout();
+            // 
+            // CarLotAccess
+            // 
+            CarLotAccess.Location = new Point(365, 290);
+            CarLotAccess.Name = "CarLotAccess";
+            CarLotAccess.Size = new Size(147, 23);
+            CarLotAccess.TabIndex = 0;
+            CarLotAccess.Text = "Take me to the Car Lot!";
+            CarLotAccess.UseVisualStyleBackColor = true;
+            CarLotAccess.Click += CarLotAccess_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(CarLotAccess);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button CarLotAccess;
     }
 }
